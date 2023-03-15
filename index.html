@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO-LIST</title>
+</head>
+<body>
+   <div class="wrapper">
+    <h3> TODO-LIST</h3>
+    <input type="text" id="todo" class="list">
+    <button onclick="addlist()"> Add</button>
+   </div>
+
+<script>
+    let task = [];
+    function addlist() {
+        const list = document.getElementById('todo');
+        task = list.value;
+
+        let element = document.createElement('div');
+        element.innerText = task;
+        document.body.appendChild(element);
+        element.style.color = 'black';
+        element.style.paddingTop = '.7rem';
+        element.style.paddingBottom = '.7rem';
+        element.style.paddingInline = '1rem';
+        element.style.backgroundColor = 'lightgray';
+        element.style.marginBlock = '.5rem';
+        element.style.borderRadius = '5px';
+        element.style.fontSize = '1rem';
+        element.style.letterSpacing = '1.1px';
+        element.style.maxWidth = '330px';
+
+    }
+</script>
+
+
+
+
+
+</body>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        display: grid;
+        place-content: center;
+        min-height: 100vh;
+        background: url(./subtle-prism.svg);
+    }
+    .list {
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        letter-spacing: 1.3px;
+        outline: none;
+        border: none;
+        background-color: #8e8c8c;
+        border-radius: 5px;
+    }
+    button {
+        padding: .6rem 1rem;
+        background-color: #8c8787;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+        transition: .3s;
+    }
+    button:hover {
+        background-color: #282727;
+        color: #fff;
+    }
+    h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+    }
+    .wrapper {
+        max-width: 500px;
+        height: fit-content;
+        padding-inline: 1rem;
+        padding-block: 1rem;
+        border-radius: 10px;
+        border: 1px solid #111;
+        background-color: rgb(78, 85, 93);
+    }
+</style>
+</html>
